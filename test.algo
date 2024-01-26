@@ -1,0 +1,18 @@
+FUNCTION palindrome(word:string) : BOOLEAN
+
+VAR
+    left , right : INTEGER;
+BEGIN
+  left:=0;
+  right:=word.lenghth-1;
+
+    IF (word.lenghth = 1 or word.length = 0) THEN
+        return true
+    END_IF
+    IF (word[left] = word[right]) THEN
+        return palindrome(word[word[left+1,right-1]])  
+    ELSE
+        return false
+    END_IF
+    
+END
